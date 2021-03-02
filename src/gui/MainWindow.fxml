@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="pane" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.MainWindow">
+   <children>
+      <Canvas fx:id="canvas" height="800.0" onMouseClicked="#click" width="800.0" />
+      <ChoiceBox fx:id="choiceBox" layoutX="825.0" layoutY="308.0" onMouseClicked="#checkChoiceBoxV" prefWidth="150.0">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="unchanging" />
+               <String fx:value="glider" />
+               <String fx:value="oscillator" />
+               <String fx:value="random" />
+               <String fx:value="manual" />
+            </FXCollections>
+         </items>
+      </ChoiceBox>
+      <Button layoutX="826.0" layoutY="506.0" mnemonicParsing="false" onAction="#reset" prefHeight="25.0" prefWidth="150.0" text="Reset" />
+      <Button fx:id="setBeginning" layoutX="825.0" layoutY="348.0" mnemonicParsing="false" onAction="#setBeginning" prefHeight="25.0" prefWidth="150.0" text="set beginning" />
+      <Button layoutX="826.0" layoutY="400.0" mnemonicParsing="false" onAction="#start" prefHeight="25.0" prefWidth="150.0" text="Start" />
+      <Button layoutX="826.0" layoutY="446.0" mnemonicParsing="false" onAction="#stop" prefHeight="25.0" prefWidth="150.0" text="Stop" />
+      <TextField fx:id="textField" layoutX="826.0" layoutY="273.0" />
+      <Label fx:id="label" alignment="CENTER" layoutX="826.0" layoutY="242.0" prefHeight="25.0" prefWidth="149.0" text="Random Bound" />
+   </children>
+</AnchorPane>
